@@ -10,7 +10,8 @@ public class Vozilo extends Akter {
 	private int smer = 1; //smer kretanja
 	private Stanica[] stanice; 
 	
-	public Vozilo(String o, int k, long min, long max, long z, Stanica[] s, Label l){
+	public Vozilo(String o, int k, long min, 
+	    long max, long z, Stanica[] s, Label l){
 		super(l); 
 		oznaka = o; kap = k; minT = min; 
 		maxT = max; zadrzavanje = z; stanice = s;
