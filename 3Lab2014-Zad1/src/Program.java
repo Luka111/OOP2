@@ -22,9 +22,11 @@ public class Program extends Frame{
 		Panel ploca2 = new Panel(new GridLayout(2,1));
 		ploca2.setBackground(Color.WHITE);
 		add(ploca2,"East");
-		String[] stanice = {"Beogradjanka", "Resavska", "Pravni fakultet", "Vukov spomenik", "Djeram pijaca"};
+		String[] stanice = {"Beogradjanka", "Resavska",
+		"Pravni fakultet", "Vukov spomenik", "Djeram pijaca"};
 		String[] oznake = {"Mercedes", "BMW"};
-		linija = new Linija(stanice,500,1000,oznake,40,1000,2000,4000,ploca1,ploca2);
+		linija = new Linija(stanice,500,1000,oznake,
+			40,1000,2000,4000,ploca1,ploca2);
 		ploca = new Panel();
 		add(ploca,"South");
 		Button dugme = new Button("Kreni");
