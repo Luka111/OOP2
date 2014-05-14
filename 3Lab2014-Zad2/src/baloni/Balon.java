@@ -9,7 +9,11 @@ public class Balon extends Figura {
 	double brzina;
 	boolean pogodjen = false;
 	
-	public Balon (Scena s, int xx, int yy, int rr, Color b, double brz, Color db){ super(s); x=xx; y=yy; r=rr; boja=b; brzina=brz; drugaBoja = db; }
+	public Balon (Scena s, int xx, int yy, int rr,
+	    Color b, double brz, Color db){
+		super(s); x=xx; y=yy; r=rr;
+		boja=b; brzina=brz; drugaBoja = db;
+	}
 
 	@Override
 	public int getX() {
