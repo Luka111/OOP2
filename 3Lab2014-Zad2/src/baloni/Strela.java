@@ -8,7 +8,12 @@ public class Strela extends Figura {
 	private double brzina;
 	Color boja;
 	
-	public Strela(Scena s, int xx, int yy, int duz, double brz, Color b){ super(s); x=xx; y=yy; duzina=duz; brzina=brz; boja=b; }
+	public Strela(Scena s, int xx, int yy, 
+	    int duz, double brz, Color b){
+	    	super(s); 
+	    	x=xx; y=yy; duzina=duz; 
+	    	brzina=brz; boja=b;
+	}
 	
 	@Override
 	public int getX() {
