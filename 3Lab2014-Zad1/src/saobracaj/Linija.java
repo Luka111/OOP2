@@ -6,21 +6,23 @@ public class Linija {
 	private Stanica[] stanice;
 	private Vozilo[] vozila;
 	
-	public Linija(String[] nizImenaStanica, long minTdol, long minTodl, String[] nizOznaka, int kap, 
-		long zadrzavanje, long minTvoz, long maxTvoz, Panel panel1, Panel panel2){
+	public Linija(String[] nizImenaStanica, long minTdol,
+	    long minTodl, String[] nizOznaka, int kap,
+	    long zadrzavanje, long minTvoz, long maxTvoz,
+	    Panel panel1, Panel panel2){
 		stanice = new Stanica[nizImenaStanica.length];
 		for (int i=0; i<nizImenaStanica.length; i++){
 			Label l = new Label("");
 			panel1.add(l);
-			stanice[i] = new Stanica(nizImenaStanica[i],minTdol,minTodl,l);
-			System.out.println("Stanica br " + i + " krenula");
+			stanice[i] = new Stanica(nizImenaStanica[i],
+			minTdol,minTodl,l);
 		}
 		vozila = new Vozilo[nizOznaka.length];
 		for (int i=0; i<nizOznaka.length; i++){
 			Label l = new Label("");
 			panel2.add(l);
-			vozila[i] = new Vozilo(nizOznaka[i],kap,minTvoz,maxTvoz,zadrzavanje,stanice,l);
-			System.out.println("Vozilo br " + i + " krenulo");
+			vozila[i] = new Vozilo(nizOznaka[i],kap,minTvoz,
+			maxTvoz,zadrzavanje,stanice,l);
 		}
 	}
 	
