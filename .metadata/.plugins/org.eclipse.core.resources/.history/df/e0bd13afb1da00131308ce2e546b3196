@@ -1,0 +1,9 @@
+package kisa;
+
+public class Talas extends Thread implements Prikaziv{
+	
+	public void run(){}
+	
+	public void crtaj(){}
+
+}

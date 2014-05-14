@@ -1,0 +1,11 @@
+package saobracaj;
+
+public class Vozilo extends Akter {
+
+	@Override
+	public void radnja() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package radionica;
+
+public class Skladiste {
+	
+	private Proizvod[] proizvodi;
+	
+	public Skladiste(int n){ proizvodi = new Proizvod[n]; }
+	
+}

@@ -1,0 +1,65 @@
+package rastojanje;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Rastojanje extends Frame {
+
+	private TextField[] koord = new TextField[6];
+	private Label rez = new Label("0");
+	
+	private Rastojanje(){
+		super("Rastojanje");
+		setBounds(100,100,250,150);
+		popuniProzor();
+		setVisible(true);
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent d){ dispose(); }
+		});
+	}
+	
+	private void popuniProzor(){
+		Panel plo = new Panel();
+		add(plo,"Center");
+		plo.setLayout(new GridLayout(4,2,3,1));
+		plo.add(new Label("Prva tacka:"));
+		plo.add(new Label("Druga tacka:"));
+		KoordPromena osluskivac = new KoordPromena();
+		for (int i=0; i<6; i++){
+			(koord[i] = new TextField("1")).addTextListener(osluskivac);
+			plo.add(koord[i]);
+		}
+		add(plo = new Panel(new GridLayout(4,1)), "West");
+		String[] ozn = { "", "X", "Y", "Z" };
+		for (int i=0; i<4; plo.add(new Label(ozn[i++])));
+		add(plo = new Panel(), "North");
+		plo.add(new Label("Rastojanje"));
+		plo.add(rez);
+	}
+	
+	public class KoordPromena implements TextListener{
+		public void textValueChanged(TextEvent d){
+			try{
+				rez.setText(
+						Double.toString(
+								Math.sqrt(
+										Math.pow(Double.parseDouble(koord[0].getText()) - Double.parseDouble(koord[1].getText()), 2) +
+										Math.pow(Double.parseDouble(koord[2].getText()) - Double.parseDouble(koord[3].getText()), 2) +
+										Math.pow(Double.parseDouble(koord[4].getText()) - Double.parseDouble(koord[5].getText()), 2)
+										
+								)
+						)
+				);
+			}catch (NumberFormatException g){
+				rez.setText("Greska!");
+			}
+			validate();
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Rastojanje();
+	}
+
+}

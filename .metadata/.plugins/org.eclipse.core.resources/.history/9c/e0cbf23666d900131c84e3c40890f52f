@@ -1,0 +1,40 @@
+package baloni;
+
+import java.awt.*;
+
+public class Luk extends Figura{
+	
+	private int x,y;//koordinate
+	private int stranica,korak;
+	Color boja;
+	
+	public Luk(Scena s, int xx, int yy, int str, int kor, Color b){ super(s); x=xx; y=yy; stranica=str; korak=kor; boja=b; }
+	
+	@Override
+	public int getX() {
+		return x;
+	}
+
+	@Override
+	public int getY() {
+		return y;
+	}
+
+	public void pomerajGore(){
+		int sir = scena.getWidth();
+		int vis = scena.getHeight();
+		if (x-korak>=0){
+			x+= korak;
+		}
+	}
+	
+	@Override
+	public void crtaj() {
+		Graphics g = scena.getGraphics();
+		g.setColor(boja);
+		g.drawLine(x,y-stranica/2,x,y+stranica/2);
+		g.drawLine(x,y-stranica/2,x+stranica,y);
+		g.drawLine(x,y+stranica/2,x+stranica,y);
+	}
+
+}

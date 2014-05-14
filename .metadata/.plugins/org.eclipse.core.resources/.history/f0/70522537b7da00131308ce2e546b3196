@@ -1,0 +1,27 @@
+package kisa;
+
+public class Bara extends Povrs implements Runnable {
+	
+	private Elem prvi,posl;
+	private Thread nit = new Thread(this);
+	private class Elem{
+		Talas talas;
+		Elem sled;
+		Elem(Talas t){
+			talas = t;
+			if(prvi == null) prvi = this; else posl.sled = this;
+			posl = this;
+		}
+	}
+	
+	public void padKapi(Kap k){
+		new Elem(new Talas(this,k.x,k.y,k.tezina*0.05,k.tezina/0.05))
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

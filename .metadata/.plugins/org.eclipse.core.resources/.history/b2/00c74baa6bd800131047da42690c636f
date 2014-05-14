@@ -1,0 +1,47 @@
+package saobracaj;
+
+public class Linija {
+	
+	private Stanica[] stanice;
+	private Vozilo[] vozila;
+	
+	public Linija(String[] nizImenaStanica, long minTdol, long minTodl, String[] nizOznaka, int kap, long zadrzavanje, long minTvoz, long maxTvoz){
+		stanice = new Stanica[nizImenaStanica.length];
+		for (int i=0; i<nizImenaStanica.length; i++){
+			stanice[i] = new Stanica(nizImenaStanica[i],minTdol,minTodl);
+		}
+		vozila = new Vozilo[nizOznaka.length];
+		for (int i=0; i<nizOznaka.length; i++){
+			vozila[i] = new Vozilo(nizOznaka[i],kap,minTvoz,maxTvoz,zadrzavanje,stanice);
+		}
+	}
+	public int getBrStanica() { return stanice.length; }
+	public Stanica getStanica(int i) {
+		if ((i>=0) && (i<stanice.length)){
+			return stanice[i];
+		}else{
+			return null;
+		}
+	}
+	public void pokreniStanicu(int i){
+		if ((i>=0) && (i<stanice.length)){
+			stanice[i].kreni();
+		}
+	}
+	public void zaustaviStanicu(int i){
+		if ((i>=0) && (i<stanice.length)){
+			stanice[i].stani();
+		}
+	}
+	public void unistiStanicu(int i){
+		if ((i>=0) && (i<stanice.length)){
+			stanice[i].zavrsi();
+		}
+	}
+	public void pokreniVozilo(int i){
+		if ((i>=0) && (i<vozila.length)){
+			vozila[i].kreni();
+		}
+	}
+	
+}

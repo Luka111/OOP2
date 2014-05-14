@@ -1,0 +1,9 @@
+package skladiste;
+
+public class Niz {
+	
+	private Zapis[] zapisi;
+	
+	public Niz(int n) throws GVelicina { if(n<=0) throw new GVelicina() ;zapisi = new Zapis[n]; }
+	
+}

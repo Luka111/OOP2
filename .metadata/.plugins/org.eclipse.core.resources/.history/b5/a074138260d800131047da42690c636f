@@ -1,0 +1,15 @@
+package saobracaj;
+
+public class Vozilo extends Akter {
+	
+	private String oznaka;
+	
+	public Vozilo(String o){ oznaka = o; }
+	
+	@Override
+	public void radnja() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

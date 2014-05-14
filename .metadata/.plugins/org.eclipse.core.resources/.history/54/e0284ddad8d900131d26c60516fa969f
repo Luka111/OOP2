@@ -1,0 +1,16 @@
+package radionica;
+
+public class Masina extends Mehanizam {
+
+	private Skladiste skl;
+	
+	public Masina(Skladiste s){ skl = s; }
+	
+	@Override
+	public void radnja(){
+		try{
+			skl.dodaj(new Proizvod());
+		}catch(InterruptedException g){}
+	}
+
+}

@@ -1,0 +1,5 @@
+package baloni;
+
+public abstract class Figura {
+
+}

@@ -1,0 +1,25 @@
+import saobracaj.*;
+import java.awt.*;
+
+public class Program extends Frame{
+	
+	public Program(){
+		super("Gradski saobracaj");
+		setBounds(100,100,300,200);
+		Panel ploca = new Panel(new GridLayout(1,2));
+		add(ploca,"North");
+		ploca.add(new Label("Stanice:"));
+		ploca.add(new Label("Vozila:"));
+		
+		Panel ploca1 = new Panel(new GridLayout(5,1));
+		add(ploca1,"Left");
+		Panel ploca2 = new Panel(new GridLayout(2,1));
+		add(ploca2,"Right");
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package saobracaj;
+
+public class Vozilo extends Akter {
+	
+	private String oznaka;
+	private int kap;
+	private long minT, maxT, zadrzavanje;
+	
+	public Vozilo(String o, int k, long min, long max, long z){ oznaka = o; kap = k; minT = min; maxT = max; zadrzavanje = z;}
+	
+	
+	@Override
+	public void radnja() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

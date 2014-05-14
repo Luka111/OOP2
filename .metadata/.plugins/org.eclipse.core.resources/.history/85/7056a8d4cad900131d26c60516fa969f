@@ -1,0 +1,37 @@
+package baloni;
+import java.awt.*;
+
+public class Balon extends Figura {
+	
+	int x,y; //koordinate centra
+	int r; //poluprecnik
+	Color boja,drugaBoja;
+	double brzina;
+	
+	public Balon (Scena s, int xx, int yy, int rr, Color b, double brz, Color db){ super(s); x=xx; y=yy; r=rr; boja=b; brzina=brz; drugaBoja = db; }
+
+	@Override
+	public int getX() {
+		return x;
+	}
+
+	@Override
+	public int getY() {
+		return y;
+	}
+
+	@Override
+	public void crtaj() {
+		int sir = scena.getWidth();
+		int vis = scena.getHeight();
+		Graphics g = scena.getGraphics();
+		g.setColor(boja);
+		g.fillOval(x-r/2, y-r/2, r, r);
+		if(y-brzina*40>=0){
+			y -= brzina*40;
+		}else{
+			y = vis;
+		}
+	}
+
+}

@@ -1,0 +1,10 @@
+package radionica;
+import java.awt.*;
+
+public class GrafickoSkladiste extends Skladiste {
+
+	private TextArea polje;
+	
+	public GrafickoSkladiste(int n, TextArea p){ super(n); polje = p; }
+	
+}

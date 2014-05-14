@@ -1,0 +1,15 @@
+package skladiste;
+
+public class Jedinica {
+	
+	private String oznaka;
+	private static String[] oznake = {"kom","l","m","kg"};
+	
+	public Jedinica(String o){ 
+		for(int i=0; i<oznake.length; i++){
+			if(o != oznake[i]) postoji = false;
+		}
+	}
+	public String getOznaka(){ return oznaka; }
+	
+}

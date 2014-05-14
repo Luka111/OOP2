@@ -1,0 +1,15 @@
+package radionica;
+
+public class Traka extends Mehanizam {
+
+	private Skladiste skl;
+	private Proizvod trenutniProizvod;
+	
+	public Traka(Skladiste s){ skl = s; }
+	
+	@Override
+	public void radnja() {
+		trenutniProizvod = skl.uzmi();
+	}
+
+}

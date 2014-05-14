@@ -1,0 +1,11 @@
+package radionica;
+
+public class Traka extends Mehanizam {
+
+	@Override
+	public void radnja() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

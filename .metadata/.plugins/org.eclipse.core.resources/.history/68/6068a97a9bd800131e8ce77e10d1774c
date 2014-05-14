@@ -1,0 +1,43 @@
+import saobracaj.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Program extends Frame{
+	
+	private Linija linija;
+	
+	private Program(){
+		super("Gradski saobracaj");
+		setBounds(100,100,400,200);
+		Panel ploca = new Panel(new GridLayout(1,2));
+		add(ploca,"North");
+		ploca.add(new Label("Stanice:"));
+		ploca.add(new Label("Vozila:"));
+		
+		Panel ploca1 = new Panel(new GridLayout(5,1));
+		add(ploca1,"East");
+		Panel ploca2 = new Panel(new GridLayout(2,1));
+		add(ploca2,"West");
+		String[] stanice = {"Beogradjanka", "Resavska", "Pravni fakultet", "Vukov spomenik", "Djeram pijaca"};
+		String[] oznake = {"Mercedes", "BMW"};
+		linija = new Linija(stanice,500,1000,oznake,40,1000,2000,4000,ploca1,ploca2);
+		ploca = new Panel();
+		add(ploca,"South");
+		Button dugme = new Button("Kreni");
+		//
+		ploca.add(dugme);
+		ploca.add(dugme = new Button("Stani"));
+		//
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent d){
+				linija.prekini();
+				dispose();
+			}
+		});
+	}
+	
+	public static void main(String[] args) {
+		new Program().setVisible(true);
+	}
+
+}

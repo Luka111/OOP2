@@ -1,0 +1,10 @@
+package baloni;
+
+public abstract class Figura {
+	
+	public abstract int getX();
+	public abstract int getY();
+	//iscrtavanje figure
+	//...
+	
+}

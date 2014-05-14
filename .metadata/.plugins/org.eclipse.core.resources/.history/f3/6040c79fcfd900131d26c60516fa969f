@@ -1,0 +1,15 @@
+package baloni;
+
+public abstract class Figura {
+	
+	protected Scena scena;
+	
+	protected Figura(Scena s){
+		(scena = s).dodaj(this);
+	}
+	public abstract int getX();
+	public abstract int getY();
+	//iscrtavanje figure
+	public abstract void crtaj();
+	
+}

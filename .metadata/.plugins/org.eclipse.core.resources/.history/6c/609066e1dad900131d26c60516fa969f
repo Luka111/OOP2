@@ -1,0 +1,6 @@
+package radionica;
+import java.awt.*;
+
+public class GrafickoSkladiste extends Skladiste {
+
+}

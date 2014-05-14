@@ -1,0 +1,6 @@
+package kisa;
+import java.awt.*;
+
+public class Povrs extends Canvas {
+
+}

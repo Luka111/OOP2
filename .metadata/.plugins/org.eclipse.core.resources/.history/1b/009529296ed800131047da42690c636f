@@ -1,0 +1,65 @@
+package saobracaj;
+import java.awt.*;
+
+public class Linija {
+	
+	private Stanica[] stanice;
+	private Vozilo[] vozila;
+	
+	public Linija(String[] nizImenaStanica, long minTdol, long minTodl, String[] nizOznaka, int kap, long zadrzavanje, long minTvoz, long maxTvoz, Panel panel1, Panel panel2){
+		stanice = new Stanica[nizImenaStanica.length];
+		for (int i=0; i<nizImenaStanica.length; i++){
+			Label l = new Label("");
+			stanice[i] = new Stanica(nizImenaStanica[i],minTdol,minTodl,l);
+			panel1.add(l);
+		}
+		vozila = new Vozilo[nizOznaka.length];
+		for (int i=0; i<nizOznaka.length; i++){
+			Label l = new Label("");
+			vozila[i] = new Vozilo(nizOznaka[i],kap,minTvoz,maxTvoz,zadrzavanje,stanice,l);
+			panel2.add(l);
+		}
+	}
+	
+	
+	
+	public int getBrStanica() { return stanice.length; }
+	public Stanica getStanica(int i) {
+		if ((i>=0) && (i<stanice.length)){
+			return stanice[i];
+		}else{
+			return null;
+		}
+	}
+	public void pokreniStanicu(int i){
+		if ((i>=0) && (i<stanice.length)){
+			stanice[i].kreni();
+		}
+	}
+	public void zaustaviStanicu(int i){
+		if ((i>=0) && (i<stanice.length)){
+			stanice[i].stani();
+		}
+	}
+	public void unistiStanicu(int i){
+		if ((i>=0) && (i<stanice.length)){
+			stanice[i].zavrsi();
+		}
+	}
+	public void pokreniVozilo(int i){
+		if ((i>=0) && (i<vozila.length)){
+			vozila[i].kreni();
+		}
+	}
+	public void zaustaviVozilo(int i){
+		if ((i>=0) && (i<vozila.length)){
+			vozila[i].stani();
+		}
+	}
+	public void unsitiVozilo(int i){
+		if ((i>=0) && (i<vozila.length)){
+			vozila[i].zavrsi();
+		}
+	}
+	
+}

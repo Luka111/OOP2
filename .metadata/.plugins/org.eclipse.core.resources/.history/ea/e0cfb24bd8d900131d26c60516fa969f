@@ -1,0 +1,5 @@
+package radionica;
+
+public abstract class Mehanizam {
+
+}

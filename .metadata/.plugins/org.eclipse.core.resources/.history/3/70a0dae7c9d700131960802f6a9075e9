@@ -1,0 +1,16 @@
+package rastojanje;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Rastojanje extends Frame {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

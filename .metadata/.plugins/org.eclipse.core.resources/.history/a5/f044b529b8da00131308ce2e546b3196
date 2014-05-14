@@ -1,0 +1,42 @@
+package kisa;
+import java.awt.*;
+
+public class Bara extends Povrs implements Runnable {
+	
+	private Elem prvi,posl;
+	private Thread nit = new Thread(this);
+	private class Elem{
+		Talas talas;
+		Elem sled;
+		Elem(Talas t){
+			talas = t;
+			if(prvi == null) prvi = this; else posl.sled = this;
+			posl = this;
+		}
+	}
+	
+	public synchronized void padKapi(Kap k){
+		new Elem(new Talas(this,k.x,k.y,k.tezina*0.05,k.tezina/0.05));
+	}
+	
+	public synchronized void paint(Graphics g){
+		for (Elem tek=prvi; tek!=null; tek=tek.sled){
+			if (tek.talas.zivTalas()){
+				tek.talas.crtaj();
+			}else{
+				izbaci(tek.talas);
+			}
+		}
+	}
+	
+	@Override
+	public void run() {
+		try{
+			while(!Thread.interrupted()){
+				repaint();
+				Thread.sleep(40);
+			}
+		}catch(InterruptedException g){}
+	}
+
+}

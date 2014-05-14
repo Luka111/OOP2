@@ -1,0 +1,18 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class Program extends Frame {
+	
+	public Program(){
+		super("Pljusak");
+		setSize(500,300);
+		setVisible(true);
+		popuniProzor();
+		addWindowListener(Win)
+	}
+	
+	public static void main(String[] argv){
+		new Program();
+	}
+	
+}

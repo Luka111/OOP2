@@ -1,0 +1,27 @@
+package saobracaj;
+
+public class Vozilo extends Akter {
+	
+	private String oznaka;
+	private int kap, brPut = 0;
+	private long minT, maxT, zadrzavanje;
+	private Stanica stanica; 
+	
+	public Vozilo(String o, int k, long min, long max, long z){ oznaka = o; kap = k; minT = min; maxT = max; zadrzavanje = z;}
+	
+	
+	
+	@Override
+	public void radnja() {
+		// TODO Auto-generated method stub
+		try{
+			sleep((long)(minT + Math.random()*(maxT-minT)));
+			brPut -= (int)brPut*Math.random();
+			sleep((long)zadrzavanje);
+			(stanica.getBrPut() < (brPut-kap))? brPut += stanica.getBrPut():kap;
+		}catch(InterruptedException g){}
+	}
+	
+	public String toString() { return oznaka + " ide ka stanici: " + stanica + ". Broj putnika: " + brPut; }
+
+}

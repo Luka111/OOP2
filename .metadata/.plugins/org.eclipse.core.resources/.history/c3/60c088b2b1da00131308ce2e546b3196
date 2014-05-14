@@ -1,0 +1,15 @@
+package kisa;
+import java.awt.*;
+
+public class Talas extends Thread implements Prikaziv{
+	
+	private Bara bara;
+	private float crvena=0, zelena=0, plava=0;
+	
+	public(Bara b){ bara = b; }
+	
+	public void run(){}
+	
+	public void crtaj(){}
+
+}

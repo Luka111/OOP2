@@ -1,0 +1,5 @@
+package baloni;
+
+public class Scena extends Thread {
+
+}

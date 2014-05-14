@@ -1,0 +1,13 @@
+import baloni.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Igra extends Frame{
+
+	
+	
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package rastojanje;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Rastojanje extends Frame {
+
+	private TextField[] koord = new TextField[6];
+	private Label rez = new Label("0");
+	
+	private Rastojanje(){
+		super("Rastojanje");
+		setBounds(100,100,250,150);
+		popuniProzor();
+		setVisible(true);
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent d){ dispose(); }
+		});
+	}
+	
+	private void popuniProzor(){
+		Panel plo = new Panel();
+		add(plo,"Center");
+		plo.setLayout(new GridLayout(4,2,4,2));
+		plo.add(new Label("Prva tacka:"));
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

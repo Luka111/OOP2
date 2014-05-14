@@ -1,0 +1,7 @@
+package kisa;
+
+import Canvas;
+
+public class Povrs extends Canvas {
+
+}

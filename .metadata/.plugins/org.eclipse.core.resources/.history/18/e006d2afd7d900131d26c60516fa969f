@@ -1,0 +1,15 @@
+package radionica;
+
+public class Skladiste {
+	
+	private Proizvod[] proizvodi;
+	private int ulaz,izlaz;
+	private int pun;
+	
+	public Skladiste(int n){ proizvodi = new Proizvod[n]; }
+	
+	public synchronized void dodaj(Proizvod p){
+		while (pun==proizvodi.length) wait();
+	}
+	
+}

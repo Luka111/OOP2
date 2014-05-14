@@ -1,0 +1,5 @@
+package kisa;
+
+public class Talas extends Thread {
+
+}

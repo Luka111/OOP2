@@ -1,0 +1,22 @@
+package skladiste;
+
+public class Zapis implements Vrednosno {
+	
+	private Artikal artikal;
+	private int kolicina;
+	private double jedCena;
+	
+	public Artikal getArtikal() { return artikal; }
+	public int getKolicina() { return kolicina; }
+	public double getJedCena() { return jedCena; }
+	
+	public void setKolicina(int kol) { kolicina = kol; }
+	public void setJedCena(double jc) { jedCena = jc; }
+	
+	@Override
+	public double vrednost() {
+		// TODO Auto-generated method stub
+		return kolicina*jedCena;
+	}
+
+}

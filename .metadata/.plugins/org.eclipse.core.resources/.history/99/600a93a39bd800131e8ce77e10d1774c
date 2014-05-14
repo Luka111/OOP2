@@ -1,0 +1,28 @@
+package saobracaj;
+import java.awt.*;
+
+public class Stanica extends Akter {
+
+	private String ime;
+	private long minT, maxT;
+	private int brPut = 0;
+	
+	public Stanica(String i, long min, long max, Label l){
+		super(l);
+		ime = i; minT = min; maxT = max;
+	}
+	
+	public void radnja(){
+		// TODO Auto-generated method stub
+		try{
+			sleep((long)(minT + Math.random()*(maxT-minT)));
+			brPut++;
+		}catch(InterruptedException g){}
+		System.out.println("Izaso sam iz RADNJA funkcije");
+	}
+	public String getIme(){ return ime; }
+	public int getBrPut(){ return brPut; }
+	public void smanjiBrPut(){ brPut--; }
+	public String toString(){ return ime + "Br Put:" + brPut;}
+
+}

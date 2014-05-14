@@ -1,0 +1,31 @@
+package baloni;
+import java.awt.*;
+
+public class Balon extends Figura {
+	
+	int x,y; //koordinate centra
+	int r; //poluprecnik
+	Color boja;
+	double brzina;
+	
+	public Balon (Scena s, int xx, int yy, int rr, Color b, double brz ){ super(s); x=xx; y=yy; r=rr; boja=b; brzina=brz; }
+
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return x;
+	}
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return y;
+	}
+
+	@Override
+	public void crtaj() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

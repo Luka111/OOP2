@@ -1,0 +1,29 @@
+package kisa;
+import java.awt.*;
+
+public class Talas extends Thread implements Prikaziv{
+	
+	private Bara bara;
+	private int x,y;
+	private double dr,db,r=0;
+	private float crvena=0, zelena=0, plava=0;
+	
+	public Talas(Bara b,int xx, int yy, double ddr, double ddb){ bara = b; x=xx; y=yy; dr=ddr; db=ddb; }
+	
+	public void run(){
+		try{
+			while(!interrupted()){
+	
+			}
+		}catch(InterruptedException g){}
+	}
+	
+	public void crtaj(){
+		Graphics g = bara.getGraphics();
+		int rr = (int)r;
+		g.drawOval(x-rr/2,y-rr/2,rr,rr);
+	}
+	
+	public void prekini() { interrupt(); }
+
+}

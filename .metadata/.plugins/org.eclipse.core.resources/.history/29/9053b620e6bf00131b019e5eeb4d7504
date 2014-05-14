@@ -1,0 +1,11 @@
+package skladiste;
+
+public class Zapis implements Vrednosno {
+
+	@Override
+	public double vrednost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

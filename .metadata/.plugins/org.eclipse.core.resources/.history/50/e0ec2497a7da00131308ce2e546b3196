@@ -1,0 +1,10 @@
+package kisa;
+
+public class Kap {
+	
+	private int x,y;
+	private double tezina;
+	
+	public Kap(int xx, int yy, double t){ x=xx; y=yy; tezina=t;}
+
+}

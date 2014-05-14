@@ -1,0 +1,12 @@
+package kisa;
+import java.awt.*;
+
+public class Prikaziv {
+
+	protected Graphics g;
+	
+	protected Prikaziv(Graphics gr){ g = gr; }
+	
+	protected void crtaj(){}
+	
+}

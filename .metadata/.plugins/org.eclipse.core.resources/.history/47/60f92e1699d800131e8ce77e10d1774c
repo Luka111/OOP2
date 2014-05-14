@@ -1,0 +1,28 @@
+package saobracaj;
+import java.awt.*;
+
+public abstract class Akter extends Thread {
+
+	private boolean radi = false;
+	private Label labela;
+	
+	public Akter(Label l){ labela = l; }
+	public abstract void radnja();
+	public void run(){
+		try{
+			while (!interrupted()){
+				if (!radi) synchronized (this) {
+					while(!radi) wait();
+				}
+				radnja();
+				((Label)labela).setText("aaaaa");
+			}
+		}catch(InterruptedException g){}
+	}
+	public void stani() { radi = false; }
+	public synchronized void kreni(){
+		radi = true; notifyAll();
+	}
+	public void zavrsi(){ interrupt(); }
+	
+}

@@ -1,0 +1,15 @@
+package radionica;
+
+public class Masina extends Mehanizam {
+
+	private Skladiste skl;
+	
+	public Masin(Skladiste s){ skl = s; }
+	
+	@Override
+	public void radnja() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

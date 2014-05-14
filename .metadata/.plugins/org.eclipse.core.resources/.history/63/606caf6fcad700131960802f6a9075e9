@@ -1,0 +1,16 @@
+package rastojanje;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Rastojanje extends Frame {
+
+	private TextField[] koord = new TextField[6];
+	private Label rez = new Label("0");
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

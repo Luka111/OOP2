@@ -1,0 +1,11 @@
+package skladiste;
+
+public class Jedinica {
+	
+	private String oznaka;
+	private static String[] oznake = {"kom","l","m","kg"};
+	
+	public Jedinica(String o){ 
+	public String getOznaka(){ return oznaka; }
+	
+}

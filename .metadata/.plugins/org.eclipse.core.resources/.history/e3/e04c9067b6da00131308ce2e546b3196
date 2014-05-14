@@ -1,0 +1,13 @@
+package kisa;
+
+public class Bara extends Povrs implements Runnable {
+	
+	public void padKapi(Kap k){}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

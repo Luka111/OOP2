@@ -1,0 +1,34 @@
+import baloni.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Igra extends Frame{
+
+	private Scena scena = new Scena();
+	
+	public void popuniProzor(){
+		add(scena,"Center");
+		scena.setBackground(Color.WHITE);
+		Panel plo = new Panel();
+		add(plo, "South");
+		plo.setBackground(Color.GRAY);
+	}
+	
+	public Igra(){
+		super("Gadjanje balona");
+		setSize(400,300);
+		popuniProzor();
+		setVisible(true);
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent d){
+				scena.zavrsi();
+				dispose();
+			}
+		});
+	}
+	
+	public static void main(String[] args) {
+		new Igra();
+	}
+
+}

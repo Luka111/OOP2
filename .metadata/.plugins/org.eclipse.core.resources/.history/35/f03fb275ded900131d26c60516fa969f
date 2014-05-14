@@ -1,0 +1,10 @@
+package radionica;
+import java.awt.*;
+
+public class GrafickiMotor extends Motor {
+	
+	private Panel ploca;
+	
+	public GrafickiMotor(int n, Panel p){ super(n); ploca=p; }
+	
+}

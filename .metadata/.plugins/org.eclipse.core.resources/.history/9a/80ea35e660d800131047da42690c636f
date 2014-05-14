@@ -1,0 +1,17 @@
+package saobracaj;
+
+public class Vozilo extends Akter {
+	
+	private String oznaka;
+	private int kap;
+	private long minT, maxT;
+	
+	public Vozilo(String o, int k, long min, long max){ oznaka = o; kap = k; minT = min; maxT = max;}
+	
+	@Override
+	public void radnja() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,20 @@
+import baloni.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Igra extends Frame{
+
+	public void popuniProzor(){
+		
+	}
+	
+	public Igra(){
+		super("Gadjanje balona");
+		setSize(400,300);
+	}
+	
+	public static void main(String[] args) {
+		new Igra();
+	}
+
+}

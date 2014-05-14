@@ -1,0 +1,23 @@
+package baloni;
+import java.awt.*;
+
+public class Strela extends Figura {
+	
+	private int duzina;
+	private double brzina;
+	
+	public Strela(Scena s, int x, int y, int duz, double brz, Color b){}
+	
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,25 @@
+import kisa.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Program extends Frame {
+	
+	private Bara bara = new Bara();
+	
+	public Program(){
+		super("Pljusak");
+		setSize(500,300);
+		setVisible(true);
+		popuniProzor();
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent d){
+				
+			}
+		})
+	}
+	
+	public static void main(String[] argv){
+		new Program();
+	}
+	
+}

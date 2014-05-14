@@ -1,0 +1,6 @@
+package skladiste;
+
+public class Artikal {
+	private String naziv;
+	private Jedinica jedinica;
+}

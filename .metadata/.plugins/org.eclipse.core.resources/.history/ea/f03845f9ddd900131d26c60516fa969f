@@ -1,0 +1,5 @@
+package radionica;
+
+public class GrafickiMotor extends Motor {
+
+}

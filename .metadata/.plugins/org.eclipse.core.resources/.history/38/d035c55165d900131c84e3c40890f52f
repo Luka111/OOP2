@@ -1,0 +1,31 @@
+package baloni;
+
+import java.awt.*;
+
+public class Luk extends Figura{
+	
+	private int x,y;//koordinate
+	private int stranica,korak;
+	Color boja;
+	
+	public Luk(Scena s, int xx, int yy, int str, int kor, Color b){ super(s); x=xx; y=yy; stranica=str; korak=kor; boja=b; }
+	
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return x;
+	}
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return y;
+	}
+
+	@Override
+	public void crtaj() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

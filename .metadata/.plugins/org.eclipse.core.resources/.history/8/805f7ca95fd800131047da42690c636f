@@ -1,0 +1,20 @@
+package saobracaj;
+
+public class Stanica extends Akter {
+
+	private String ime;
+	private long minT, maxT;
+	private int brPut = 0;
+	
+	public Stanica(String i, long min, long max){
+		ime = i; minT = min; maxT = max;
+	}
+	
+	public void radnja(){
+		// TODO Auto-generated method stub
+		try{
+			sleep((long)(minT + Math.random()*(maxT-minT)));
+		}catch(InterruptedException g){}
+	}
+
+}
