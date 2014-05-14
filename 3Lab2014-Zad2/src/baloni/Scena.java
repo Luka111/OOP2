@@ -42,15 +42,17 @@ public class Scena extends Canvas implements Runnable {
 	
 	public void run(){
 		try{
-			while (!Thread.interrupted()) { repaint(); Thread.sleep(20); }
+			while (!Thread.interrupted()) { repaint(); Thread.sleep(40); }
 		}catch(InterruptedException g){}
 	}
 	
 	public boolean proveriBusenje(int xBalona, int yBalona, int rBalona){
 		for(Elem tek=prvi; tek!=null; tek=tek.sled){
 			if(tek.fig instanceof Strela){
-				if((tek.fig.getX() + tek.fig.getDuzina() >= xBalona) && (tek.fig.getX() + tek.fig.getDuzina() <= xBalona + rBalona)
-						&& (tek.fig.getY() >= yBalona - rBalona/2) && (tek.fig.getY() <= yBalona + rBalona/2)){
+				if((tek.fig.getX() + tek.fig.getDuzina() >= xBalona)
+				&& (tek.fig.getX() + tek.fig.getDuzina() <= xBalona + rBalona)
+				&& (tek.fig.getY() >= yBalona - rBalona/2) 
+				&& (tek.fig.getY() <= yBalona + rBalona/2)){
 					return true;
 				}
 			}
