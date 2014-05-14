@@ -11,8 +11,13 @@ public class Luk extends Figura{
 	int duzinaStrele;
 	double brzinaStrele;
 	
-	public Luk(Scena s, int xx, int yy, int str, int kor, Color b, Color bojaS, int duzinaS, double brzinaS){
-		super(s); x=xx; y=yy; stranica=str; korak=kor; boja=b; bojaStrele = bojaS; duzinaStrele = duzinaS; brzinaStrele = brzinaS;
+	public Luk(Scena s, int xx, int yy, int str,
+	    int kor, Color b, Color bojaS,
+	    int duzinaS, double brzinaS){
+		super(s);
+		x=xx; y=yy; stranica=str; korak=kor;
+		boja=b; bojaStrele = bojaS;
+		duzinaStrele = duzinaS; brzinaStrele = brzinaS;
 	}
 	
 	@Override
@@ -52,7 +57,9 @@ public class Luk extends Figura{
 	}
 	
 	public void ispaliStrelu(){
-		scena.dodaj(new Strela(scena,x,y,duzinaStrele,brzinaStrele,bojaStrele));
+	    scena.dodaj(
+	    new Strela(scena,x,y,duzinaStrele,brzinaStrele,bojaStrele)
+	    );
 	}
 
 }
