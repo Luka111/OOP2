@@ -6,7 +6,8 @@ public class Linija {
 	private Stanica[] stanice;
 	private Vozilo[] vozila;
 	
-	public Linija(String[] nizImenaStanica, long minTdol, long minTodl, String[] nizOznaka, int kap, long zadrzavanje, long minTvoz, long maxTvoz, Panel panel1, Panel panel2){
+	public Linija(String[] nizImenaStanica, long minTdol, long minTodl, String[] nizOznaka, int kap, 
+		long zadrzavanje, long minTvoz, long maxTvoz, Panel panel1, Panel panel2){
 		stanice = new Stanica[nizImenaStanica.length];
 		for (int i=0; i<nizImenaStanica.length; i++){
 			Label l = new Label("");
