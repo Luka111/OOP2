@@ -10,7 +10,11 @@ public class Vozilo extends Akter {
 	private int smer = 1; //smer kretanja
 	private Stanica[] stanice; 
 	
-	public Vozilo(String o, int k, long min, long max, long z, Stanica[] s, Label l){ super(l); oznaka = o; kap = k; minT = min; maxT = max; zadrzavanje = z; stanice = s;}
+	public Vozilo(String o, int k, long min, long max, long z, Stanica[] s, Label l){
+		super(l); 
+		oznaka = o; kap = k; minT = min; 
+		maxT = max; zadrzavanje = z; stanice = s;
+	}
 	
 	
 	
@@ -39,6 +43,8 @@ public class Vozilo extends Akter {
 		trStanica += smer;
 	}
 	
-	public synchronized String toString() { return oznaka +  " vozi ka " + stanice[trStanica] + ":" + brPut; }
+	public synchronized String toString() {
+		return oznaka +  " vozi ka " + stanice[trStanica] + ":" + brPut;
+	}
 
 }
