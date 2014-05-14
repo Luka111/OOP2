@@ -18,9 +18,13 @@ public class Motor extends Thread {
 					while (!radi) wait();
 				}
 				sleep((long)(dt*(0.8 + Math.random()*0.4)));
-				mehanizam.radnja();
+				radnja();
 			}
 		}catch(InterruptedException g){System.out.println("Mrs napolje");}
+	}
+	
+	protected void radnja() throws InterruptedException {
+		mehanizam.radnja();
 	}
 	
 	public synchronized void pokreni(){
@@ -36,5 +40,7 @@ public class Motor extends Thread {
 		interrupt();
 		System.out.println("Ugasio sam je");
 	}
+	
+	public String getMehanizamString() { return mehanizam.toString(); }
 	
 }

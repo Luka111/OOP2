@@ -7,6 +7,7 @@ public class GrafickiMotor extends Motor {
 	private Panel ploca;
 	private Checkbox polje;
 	private TextField textPolje;
+	private Label labelaMehanizma;
 	
 	public GrafickiMotor(Mehanizam m, Panel p){
 		super(m); ploca=p;
@@ -14,7 +15,6 @@ public class GrafickiMotor extends Motor {
 	}
 	
 	private void popuniPlocu(){
-		System.out.println("Popunjavam...");
 		polje = new Checkbox("radi");
 		RadiPromena osluskivac = new RadiPromena();
 		polje.addItemListener(osluskivac);
@@ -25,7 +25,14 @@ public class GrafickiMotor extends Motor {
 		VremePromena osluskivacVr = new VremePromena();
 		textPolje.addTextListener(osluskivacVr);
 		ploca.add(textPolje);
-		ploca.add(labela = new Label(mehanizam.toString()));
+		ploca.add(labelaMehanizma = new Label(mehanizam.toString()));
+	}
+	
+	protected void radnja() throws InterruptedException {
+		super.radnja();
+		labelaMehanizma.setText(mehanizam.toString());
+		System.out.println("Pisem - " + mehanizam.toString());
+		ploca.validate();
 	}
 	
 	private class RadiPromena implements ItemListener{

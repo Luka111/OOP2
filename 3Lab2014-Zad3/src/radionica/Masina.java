@@ -12,6 +12,12 @@ public class Masina extends Mehanizam {
 		skl.dodaj(trenutniProizvod = new Proizvod());
 	}
 	
-	public String toString() { return "M " + trenutniProizvod; }
+	public String toString(){
+		String vrati="";
+		if (trenutniProizvod != null){
+			vrati = "M " + trenutniProizvod.toString();
+		}
+		return vrati;
+	}
 
 }
