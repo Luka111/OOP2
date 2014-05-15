@@ -10,7 +10,10 @@ public class Igra extends Frame{
 	public void popuniProzor(){
 		add(scena,"Center");
 		scena.setBackground(Color.WHITE);
-		scena.dodaj(luk = new Luk(scena,5,20,10,10,Color.BLUE,Color.BLACK,16,0.2));
+		scena.dodaj(
+		    luk = new Luk(scena,5,20,10,10,
+		    Color.BLUE,Color.BLACK,16,0.2)
+		);
 		Panel plo = new Panel();
 		add(plo, "South");
 		plo.setBackground(Color.GRAY);
@@ -39,7 +42,11 @@ public class Igra extends Frame{
 				int sir = scena.getWidth();
 				int vis = scena.getHeight();
 				for(int i=0; i<5; i++){
-					scena.dodaj(new Balon(scena,(sir-i*30)-8,vis-8,16,Color.GREEN,0.06+Math.random()*0.02,Color.RED));
+					scena.dodaj(
+						new Balon(scena,(sir-i*30)-8,
+						vis-8,16,Color.GREEN,
+						0.06+Math.random()*0.02,Color.RED)
+					);
 					System.out.println("Dodao sam balon " + i);
 				}
 			}
