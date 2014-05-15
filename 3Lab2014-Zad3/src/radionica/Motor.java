@@ -20,7 +20,7 @@ public class Motor extends Thread {
 				sleep((long)(dt*(0.8 + Math.random()*0.4)));
 				radnja();
 			}
-		}catch(InterruptedException g){System.out.println("Mrs napolje");}
+		}catch(InterruptedException g){}
 	}
 	
 	protected void radnja() throws InterruptedException {
