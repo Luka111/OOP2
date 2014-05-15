@@ -28,7 +28,7 @@ public class Skladiste {
 	public synchronized String toString(){
 		String vrati="";
 		for (int i=0; i<pun; i++){
-			vrati += proizvodi[(i+izlaz) % proizvodi.length].toString() + "\n";
+		vrati += proizvodi[(i+izlaz) % proizvodi.length].toString() + "\n";
 		}
 		return vrati;
 	}
