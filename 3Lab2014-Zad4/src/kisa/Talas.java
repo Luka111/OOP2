@@ -8,18 +8,23 @@ public class Talas extends Thread implements Prikaziv{
 	private double dr,db,r=0;
 	private float crvena=0, zelena=0, plava=0;
 	
-	public Talas(Bara b,int xx, int yy, double ddr, double ddb){ bara = b; x=xx; y=yy; dr=ddr; db=ddb; start(); }
+	public Talas(Bara b,int xx, int yy,
+	    double ddr, double ddb){
+	    	bara = b; x=xx; y=yy;
+	    	dr=ddr; db=ddb;
+	    	start();
+	}
 	
 	public void run(){
 		try{
-			while(!interrupted()){
-				sleep(40);
-				crtaj();
-				r+=dr;
-				if(crvena+db<1) crvena += db; else crvena = 1;
-				if(zelena+db<1) zelena += db; else zelena = 1;
-				if(plava+db<1) plava += db; else plava = 1;
-			}
+		while(!interrupted()){
+			sleep(40);
+			crtaj();
+			r+=dr;
+			if(crvena+db<1) crvena += db; else crvena = 1;
+			if(zelena+db<1) zelena += db; else zelena = 1;
+			if(plava+db<1) plava += db; else plava = 1;
+		}
 		}catch(InterruptedException g){}
 	}
 	
