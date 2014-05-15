@@ -16,9 +16,9 @@ public class Radionica extends Frame {
 		for(int i=0; i<5; i++){
 			nizPloca[i] = new Panel();
 			if(i<3)
-				mot[i] = new GrafickiMotor(new Masina(skl), nizPloca[i]);
+			mot[i] = new GrafickiMotor(new Masina(skl), nizPloca[i]);
 			else
-				mot[i] = new GrafickiMotor(new Traka(skl),nizPloca[i]);
+			mot[i] = new GrafickiMotor(new Traka(skl),nizPloca[i]);
 			ploca.add(nizPloca[i]);
 		}
 		Panel glPloca = new Panel(new GridLayout(1, 2));
