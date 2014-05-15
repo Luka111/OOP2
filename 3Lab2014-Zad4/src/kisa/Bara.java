@@ -38,7 +38,8 @@ public class Bara extends Povrs implements Runnable {
 			pret = tek; tek = tek.sled;
 		}
 		if(tek != null){
-			if(pret == null) prvi = tek.sled; else pret.sled = tek.sled;
+			if(pret == null) prvi = tek.sled; 
+			    else pret.sled = tek.sled;
 			if (tek.sled == null) posl = pret;
 			if (prvi == null) posl = null;
 		}
